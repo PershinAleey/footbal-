@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <title>Project 52 — футбольный магазин</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ПРАВИЛЬНЫЙ ПУТЬ К CSS -->
-  <link rel="stylesheet" href="../CSS/styles.css" />
+  <!-- ПУТИ ДОЛЖНЫ БЫТЬ КОРНЕВЫЕ -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -14,8 +15,8 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- КЛИКАБЕЛЬНЫЙ ЛОГО -->
-      <a href="/football/" class="logo">
+      <!-- ЛОГО ДОЛЖЕН ВЕСТИ НА ТЕКУЩУЮ ДИРЕКТОРИЮ -->
+      <a href="./" class="logo">
         <span class="logo-mark">52</span>
         <span class="logo-text">PROJECT 52</span>
       </a>
@@ -57,7 +58,6 @@
         </ul>
       </div>
 
-      <!-- СЛАЙДЕР HERO -->
       <div class="hero-slider">
         <div class="hero-slide is-active" data-slide="0">
           <div class="hero-slide-label">Новинки</div>
@@ -76,7 +76,7 @@
         <div class="hero-slide" data-slide="2">
           <div class="hero-slide-label">Скидки</div>
           <h2>Коллекции прошлого сезона</h2>
-          <p>Скидки до 40% на выборочные модели.</p>
+          <p>Скидки до 40%.</p>
           <a href="#catalog" class="hero-slide-link">Смотреть скидки →</a>
         </div>
 
@@ -93,15 +93,10 @@
   </section>
 
   <!-- ========= НОВИНКИ ========= -->
-  <section class="new-arrivals">
+  <section class="new-products-section">
     <div class="container">
-      <h2 class="section-title">Новинки</h2>
-
-      <div class="new-arrivals-track" id="new-arrivals-track">
-        <!-- Подгружается JS -->
-      </div>
-
-      <div class="swipe-hint">← Листай →</div>
+      <h2 class="new-products-title">Новинки</h2>
+      <div class="new-products-scroll" id="new-products-scroll"></div>
     </div>
   </section>
 
@@ -109,7 +104,6 @@
   <section class="catalog-section" id="catalog">
     <div class="container catalog-layout">
 
-      <!-- ФИЛЬТРЫ -->
       <aside class="filters" id="filters">
         <div class="filters-header">
           <h2>Фильтры</h2>
@@ -126,7 +120,7 @@
         <div class="filter-group">
           <h3>Бренд</h3>
           <label><input type="checkbox" name="brand" value="Nike" /> Nike</label>
-          <label><input type="checkbox" name="brand" value="adidas" /> adidas</label>
+          <label><input type="checkbox" name="brand" value="adidas" /> Adidas</label>
           <label><input type="checkbox" name="brand" value="Puma" /> Puma</label>
           <label><input type="checkbox" name="brand" value="Mizuno" /> Mizuno</label>
         </div>
@@ -151,7 +145,6 @@
         <button class="btn-secondary" id="reset-filters">Сбросить фильтры</button>
       </aside>
 
-      <!-- ПРОДУКТЫ -->
       <div class="catalog-content">
         <div class="catalog-top">
           <h2>Каталог</h2>
@@ -166,9 +159,9 @@
         </div>
 
         <div class="products-grid" id="products-grid"></div>
-
         <button class="btn-load-more" id="load-more">Показать ещё</button>
       </div>
+
     </div>
   </section>
 
@@ -196,7 +189,7 @@
   <footer class="site-footer" id="contacts">
     <div class="container footer-layout">
       <div class="footer-col">
-        <a href="/football/" class="logo">
+        <a href="./" class="logo">
           <span class="logo-mark">52</span>
           <span class="logo-text">PROJECT 52</span>
         </a>
@@ -220,14 +213,12 @@
     </div>
 
     <div class="footer-bottom">
-      <div class="container">
-        © Project 52, 2025
-      </div>
+      <div class="container">© Project 52, 2025</div>
     </div>
   </footer>
 
-  <!-- ПРАВИЛЬНЫЙ ПУТЬ К JS -->
-  <script src="../JS/script.js" defer></script>
+  <!-- Праваильный путь -->
+  <script src="script.js" defer></script>
 
 </body>
 </html>
